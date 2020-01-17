@@ -20,7 +20,7 @@
 
 
 
-function createCard(obj){
+function createCard(vals){
     //create elements
     let card=document.createElement('div'),
         headline=document.createElement('div'),
@@ -41,18 +41,9 @@ function createCard(obj){
 
 
     //set text content
-    // debugger;
-    let vals=Object.values(obj);
-    console.log(vals);
-    console.log(vals[0][0].headline)
-    for (let i=0; i<vals.length-1; i++){
-        for (let j=0; vals[i].length; j++){
-            headline.textContent=vals[i][j].headline;
-            imgContainer.src=vals[i][j].authorPhoto;
-            by.textContent=vals[i][j].authorName;
-        }        
-    } 
-
+    headline.textContent=vals.headline;
+    imgContainer.src=vals.authorPhoto;
+    by.textContent=vals.authorName;
 
     return card
 };
