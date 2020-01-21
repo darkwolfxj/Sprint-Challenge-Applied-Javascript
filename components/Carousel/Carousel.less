@@ -1,6 +1,8 @@
 .carousel {
-  .width-100();
+  
   .flex(center, center);
+  display:flex;
+  flex-direction:column;
   height: 500px;
   position: relative;
   overflow: hidden;
@@ -35,7 +37,18 @@
     transform: translate(0, -50%);
   }
   img {
-    .width-100();
-    display: none;
+    display:none;
+    position:absolute;
+    right:0%;
+    top:0;
+    animation:fadeout 2s;
   }
+  .visible{
+    display:flex;
+    animation:fadein 2.5s linear;
+            }
+    @keyframes fadein {
+        from {opacity:0}
+        to {opacity:1}          
+    }
 }

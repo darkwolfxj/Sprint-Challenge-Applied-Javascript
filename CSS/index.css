@@ -253,11 +253,11 @@ body {
   font-weight: bold;
 }
 .carousel {
-  width: 100%;
-  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  display: flex;
+  flex-direction: column;
   height: 500px;
   position: relative;
   overflow: hidden;
@@ -300,6 +300,21 @@ body {
   transform: translate(0, -50%);
 }
 .carousel img {
-  width: 100%;
   display: none;
+  position: absolute;
+  right: 0%;
+  top: 0;
+  animation: fadeout 2s;
+}
+.carousel .visible {
+  display: flex;
+  animation: fadein 2.5s linear;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
